@@ -1,0 +1,31 @@
+{
+  "name": "react-native-use-permissions",
+  "version": "0.0.0",
+  "description": "Hook to keep track of the permission's state.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspect-apps/react-native-use-permissions.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "react-native",
+    "permissions",
+    "hooks"
+  ],
+  "devDependencies": {
+    "@types/react-native": "^0.63.40",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-permissions": "3.0.0"
+  },
+  "author": "Luke Brandon Farrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aspect-apps/react-native-use-permissions/issues"
+  },
+  "homepage": "https://github.com/aspect-apps/react-native-use-permissions#readme"
+}
