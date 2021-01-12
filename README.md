@@ -1,6 +1,11 @@
 # react-native-use-permissions
+This library exposes hooks relating to permissions and notifications.
+## Hooks
+### usePermissions
+A hook to keep track of the permission's state.
+### useNotificationStatus
+A hook to keep track of the notification status.
 
-This library exposes a hook to keep track of the permission's state.
 
 ## Authors
 
