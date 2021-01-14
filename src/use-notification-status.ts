@@ -15,8 +15,8 @@ export function useNotificationStatus(initialValue: ResultMap[keyof ResultMap] =
   useEffect(onSetupAppListeners, []);
   
   /**
-     * Checks for notification status
-     */
+   * Checks for notification status
+   */
   function onNotificationCheck() {
     checkNotifications().then((value) => {
       setStatus(value.status);
@@ -24,19 +24,23 @@ export function useNotificationStatus(initialValue: ResultMap[keyof ResultMap] =
   }
   
   /**
-     * Setup app listeners to check notification status
-     * when we copme from background (i.e. we changed it
-     * in the settings)
-     */
+   * Setup app listeners to check notification status
+   * when we copme from background (i.e. we changed it
+   * in the settings)
+   */
   function onSetupAppListeners() {
     AppState.addEventListener('change', handleAppStateChange);
+
+    return () => {
+      AppState.removeEventListener('change', handleAppStateChange);
+    };
   }
   
   /**
-     * Handles app state change
-     *
-     * @param {*} nextAppState
-     */
+   * Handles app state change
+   *
+   * @param {*} nextAppState
+   */
   function handleAppStateChange(nextAppState: AppStateStatus) {
     // App opened from inactive / background
     if (
